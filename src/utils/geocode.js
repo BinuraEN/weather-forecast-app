@@ -1,8 +1,8 @@
 const axios = require("axios");
-const apiKey = require("./config/keys");
+const apiKey = require("./config/keys").apiKey;
 
 const geocode = (address, callback) => {
-	const url = `http://api.openweathermap.org/data/2.5/weather?q= ${address}&appid=${apiKey.apiKey}`;
+	const url = `http://api.openweathermap.org/data/2.5/weather?q= ${address}&appid=${apiKey}`;
 
 	axios
 		.get(url)
