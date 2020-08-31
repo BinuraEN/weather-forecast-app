@@ -1,7 +1,8 @@
 const axios = require("axios");
+const apiKey = require("./config/keys");
 
 const forecast = (lat, lon, callback) => {
-	const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,hourly&appid=f06e419028ed6384df69f8c3953de570`;
+	const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,hourly&appid=${apiKey.apiKey}`;
 
 	axios
 		.get(url)
